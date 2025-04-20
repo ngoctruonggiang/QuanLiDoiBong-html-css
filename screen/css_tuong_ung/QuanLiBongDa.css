@@ -1,0 +1,1423 @@
+/* GLOBAL RESET */
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    background-color: #f0f2f5;
+    color: #0F0F0F;
+}
+/* Common style */
+.opacity-half {
+opacity: 0.6 !important;
+}
+/* --- BASE LAYOUT STYLES --- */
+.app-layout {
+    /* Renamed from .app-container */
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #F6F6F4;
+    border-right: 1px solid #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    padding-top: 23px;
+    flex-shrink: 0;
+    transition: width 0.3s ease;
+}
+
+.sidebar__brand {
+    /* Renamed */
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    margin-bottom: 40px;
+}
+
+.sidebar__brand-icon {
+    /* Renamed */
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.sidebar__brand-name {
+    /* Renamed */
+    color: #0F0F0F;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar__menu-label {
+    /* Renamed */
+    color: #626262;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding: 0 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar__nav-list {
+    /* Renamed */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar__nav-item {
+    /* Renamed */
+    /* Styles applied to link directly */
+}
+
+.sidebar__nav-link {
+    /* Renamed */
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    color: #626262;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    border-left: 4px solid transparent;
+    margin-bottom: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-left-color 0.2s ease;
+}
+
+.sidebar__nav-link:hover {
+    background-color: #e8e6f1;
+    color: #5642A9;
+}
+
+.sidebar__nav-link.active {
+    /* Use class directly */
+    color: #000000;
+    font-weight: 600;
+    background-color: #ffffff;
+    border-left-color: #5642A9;
+}
+
+.sidebar__menu-icon {
+    /* Renamed */
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+    object-fit: contain;
+    opacity: 0.8;
+    filter: grayscale(50%);
+}
+
+.sidebar__nav-link:hover .sidebar__menu-icon,
+.sidebar__nav-link.active .sidebar__menu-icon {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Main Area */
+.main-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+/* Header */
+.header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 24px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.header__logo {
+    width: 160px;
+    height: 110px;
+    margin-right: 30px;
+    object-fit: contain;
+}
+
+.header__search-container {
+    /* Renamed */
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header__search-bar {
+    /* Renamed */
+    display: flex;
+    align-items: center;
+    background: #f0f2f5;
+    border-radius: 18px;
+    padding: 6px 12px;
+}
+
+.header__search-input {
+    /* Renamed */
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.header__search-icon {
+    /* Renamed */
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+.header__actions {
+    /* Renamed */
+    display: flex;
+    align-items: center;
+}
+
+.header__action-icon {
+    /* Renamed */
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.header__action-icon:hover {
+    opacity: 1;
+}
+
+.header__profile-avatar {
+    /* Renamed */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-left: 20px;
+    object-fit: cover;
+    background-color: #ccc;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Content Area */
+.content-area {
+    /* Use class */
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+/* Common Content Title Style */
+.content-area .content-title {
+    /* Common class for all page titles */
+    color: #0F0F0F;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Common Subtitle Style */
+.content-area .content-subtitle {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Common Title Underline */
+.content-area .title-underline {
+    width: 154px;
+    /* Adjust width as needed */
+    height: 4px;
+    background: #5642A9;
+    margin-bottom: 20px;
+}
+
+/* Common Separator */
+.content-area .content-separator {
+    height: 1px;
+    border: none;
+    background-color: #eee;
+    margin: 24px 0;
+}
+
+
+/* Footer */
+.footer {
+    padding: 15px 30px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* Base styles needed by multiple pages */
+/* Keep some basic flex alignment if needed by content structure */
+.page-content [class*="row-"],
+.page-content [class*="flex-row"] {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.page-content [class*="col-"],
+.page-content [class*="flex-col"] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+/* Prevent very large margins/paddings from breaking layout */
+.page-content [class*="col-"],
+.page-content [class*="row-"],
+.page-content [class*="image"],
+.page-content [class*="text"],
+.page-content [class*="box"] {
+    max-width: 100%;
+}
+
+/* Placeholder for missing images */
+img[src^="https://figma-alpha-api.s3.us-west-2.amazonaws.com"],
+img[src^="https://via.placeholder.com"] {
+    background-color: #eee;
+    display: inline-block;
+    color: #aaa;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.2;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+img[src^="https://figma-alpha-api.s3.us-west-2.amazonaws.com"]:after,
+img[src^="https://via.placeholder.com"]:after {
+    /* content: attr(alt); */
+}
+
+
+/* --- SCOPED PAGE STYLES --- */
+
+/* == KetQuaBanner Scoped Styles == */
+.ket-qua-banner {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 28px;
+}
+.banner {
+    width: 60%;
+    height: 300px;
+    flex-shrink: 1;
+    background-image: url('/screen/assets/App-layout-template/Wrapper/Content/BannerKetQua/anh_istock.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: solid 1px #000
+  }
+  .ket-qua-banner .ket-qua-moi-nhat {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-rows: 42px 56px 166px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 22px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: solid 1px #000000;
+}
+
+.ket-qua-banner .ket-qua-moi-nhat_ti-so {
+    display: flex;
+    justify-content: space-around;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    align-items: center;
+}
+
+.ket-qua-banner .ket-qua-moi-nhat_tieu-de {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: flex-end;
+    grid-column: 2 / 3;
+}
+
+  .ket-qua-banner .co-doi-ben-trai {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: url('/screen/assets/App-layout-template/Wrapper/Content/BannerKetQua/Flag_of_Vietnam.svg.png') no-repeat center /cover;
+  }
+
+  .ket-qua-banner .co-doi-ben-phai {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: url('/screen/assets/App-layout-template/Wrapper/Content/BannerKetQua/Bandera_de_España.svg.png') no-repeat center /cover;
+  }
+
+  .ket-qua-banner .ti-so {
+    display: flex;
+    width: 70px;
+    height: 30px;
+    color: #5742A9;
+    border-radius: 50px;
+    background: rgba(87, 66, 169, 0.10);
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ket-qua-banner .ket-qua-moi-nhat_thong-tin {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: end;
+    align-items: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+}
+
+.ket-qua-banner .ten-doi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+}
+  .ket-qua-banner .ten-doi-ben-trai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row:  1 / 2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ket-qua-banner .ten-doi-ben-phai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+}
+
+  .ket-qua-banner .diem-doi-ben-phai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 100%;
+  }
+  .sut-trung-dich {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 100%;
+}
+  .ket-qua-banner .diem-doi-ben-trai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 100%;
+}
+
+  .ket-qua-banner .xep-hang-doi-ben-trai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: 100%;
+  }
+  .ket-qua-banner .pham-loi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: 100%;
+}
+  .ket-qua-banner .xep-hang-doi-ben-phai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: 100%;
+}
+/* == KetQuaThiDau Scoped Styles == */
+#ket-qua-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* .content-title and .content-subtitle are handled by common styles */
+#ket-qua-content .title-underline {
+    /* Handled by common */
+}
+
+#ket-qua-content .content-separator {
+    /* Handled by common */
+}
+
+#ket-qua-content .match-result {
+    /* Replaces row-view12, 13, 14, 15, 16 */
+    background: #FBFBFB;
+    border-radius: 8px;
+    padding: 12px 16px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    margin-bottom: 12px;
+    display: flex;
+}
+
+#ket-qua-content .match-result__team-flag {
+    /* Replaces image19, 20, 21 */
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    margin-left: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+#ket-qua-content .match-result__team-name {
+    display: flex;
+    justify-content: center;
+    width: 0;
+    color: #0F0F0F;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 5px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#ket-qua-content .match-result__score {
+    /* Replaces button2 */
+    flex-shrink: 0;
+    background: #e8e6f1;
+    border-radius: 16px;
+    border: none;
+    padding: 6px 14px;
+    margin: 0 15px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+#ket-qua-content .match-result__score-text {
+    /* Replaces text10 */
+    color: #5642A9;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#ket-qua-content .match-result__status {
+    /* Replaces button3 */
+    flex-shrink: 0;
+    background: #fee6eb;
+    border-radius: 8px;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 15px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+#ket-qua-content .match-result__status-text {
+    /* Replaces text12 */
+    color: #d32f2f;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#ket-qua-content .match-result__date {
+    /* Replaces text13, 16 */
+    color: #626262;
+    font-size: 13px;
+    margin: 0 10px;
+    flex-shrink: 0;
+    min-width: 115px;
+    text-align: right;
+}
+
+#ket-qua-content .match-result__action-icon {
+    /* Replaces image16, 11 */
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#ket-qua-content .match-result__action-icon:hover {
+    opacity: 1;
+}
+
+/* == DangKiThiDau Scoped Styles == */
+#dang-ki-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#dang-ki-content .team-profile-banner {
+    /* Replaces .view */
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-image: url('/screen/assets/Dang-ki-template/soccer-fans-cheering-team-monochrome.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dang-ki-content .team-profile-banner__title {
+    /* Replaces .text7 */
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+#dang-ki-content .content-separator {
+    /* Replaces .box2 */
+    margin: 30px 0;
+}
+
+/* .content-title handled by common */
+#dang-ki-content .player-table {
+    /* Replaces .row-view14 */
+    display: flex;
+    align-items: stretch;
+    /* Stretch columns vertically */
+    border-top: none;
+    padding: 0;
+    margin-left: 0;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#dang-ki-content .player-table__col {
+    /* Replaces column9, 10, 11 */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    border-right: 1px solid #eee;
+    flex-grow: 1;
+}
+
+#dang-ki-content .player-table__col:last-child {
+    border-right: none;
+}
+
+#dang-ki-content .player-table__header {
+    /* Replaces view2 to view6 */
+    background: #f8f9fa;
+    padding: 12px 15px;
+    margin-bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+#dang-ki-content .player-table__header-text {
+    /* Replaces text9, 11 */
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#dang-ki-content .player-table__cell {
+    /* Replaces text10 */
+    color: #555;
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0;
+    min-height: 40px;
+    /* Ensure rows align */
+}
+
+#dang-ki-content .player-table__col>.player-table__cell:last-of-type {
+    /* Use last-of-type */
+    border-bottom: none;
+}
+
+/* Adjust specific column widths */
+#dang-ki-content .player-table__col--serial {
+    flex-grow: 0;
+    flex-basis: 80px;
+}
+
+#dang-ki-content .player-table__col--name {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+#dang-ki-content .player-table__col--birthday {
+    flex-grow: 0;
+    flex-basis: 150px;
+}
+
+#dang-ki-content .player-table__col--type {
+    flex-grow: 0;
+    flex-basis: 150px;
+}
+
+#dang-ki-content .player-table__col--notes {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+/* == LapLichThiDau Scoped Styles == */
+#lap-lich-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* .content-title handled by common */
+#lap-lich-content .page-subtitle-container {
+    /* Replaces column7 */
+    align-self: stretch;
+    margin-bottom: 20px;
+}
+
+#lap-lich-content .page-subtitle-wrapper {
+    /* Replaces column8 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    position: relative;
+    width: auto;
+    padding-bottom: 5px;
+}
+
+#lap-lich-content .page-subtitle {
+    /* Replaces text9 */
+    color: #0F0F0F;
+    font-size: 18px;
+    font-weight: 600;
+    width: auto;
+    margin-bottom: 0;
+    /* Remove default margin */
+}
+
+#lap-lich-content .title-underline {
+    /* Replaces absolute-box */
+    position: static;
+    width: 140px;
+    height: 3px;
+    background: #5642A9;
+    margin-top: 4px;
+    bottom: auto;
+    left: auto;
+    margin-bottom: 0;
+}
+
+#lap-lich-content .content-separator {
+    /* Replaces box3 */
+    margin: 20px 0;
+}
+
+#lap-lich-content .match-schedule-list {
+    /* Replaces column9 */
+    align-self: stretch;
+}
+
+#lap-lich-content .match-schedule-item {
+    /* Replaces row-view15, 17, 18, 20 */
+    background: #FBFBFB;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    display: flex;
+}
+
+#lap-lich-content .match-schedule-item__team-group {
+    /* Replaces row-view9 within row */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center teams around score */
+}
+
+#lap-lich-content .match-schedule-item__team {
+    /* New wrapper */
+    display: flex;
+    align-items: center;
+}
+
+#lap-lich-content .match-schedule-item__team--home {
+    /* Replaces row-view16, 19 */
+    margin-right: 10px;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+#lap-lich-content .match-schedule-item__team--away {
+    /* New */
+    margin-left: 10px;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+#lap-lich-content .match-schedule-item__team-flag {
+    /* Replaces image20, 21, 22 */
+    width: 28px;
+    height: 28px;
+    margin: 0 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+#lap-lich-content .match-schedule-item__team-name {
+    /* Replaces text10, 12, 14, 16 */
+    color: #0F0F0F;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+    min-width: 80px;
+    /* Min width */
+}
+
+#lap-lich-content .match-schedule-item__score-placeholder {
+    /* Replaces button2 */
+    flex-shrink: 0;
+    background: #e8e6f1;
+    border-radius: 16px;
+    border: none;
+    padding: 6px 14px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#lap-lich-content .match-schedule-item__score-text {
+    /* Replaces text11 */
+    color: #5642A9;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#lap-lich-content .match-schedule-item__detail {
+    /* Replaces text13, 15 */
+    color: #626262;
+    font-size: 13px;
+    margin-left: 20px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+#lap-lich-content .match-schedule-item__detail--datetime {
+    min-width: 115px;
+}
+
+#lap-lich-content .match-schedule-item__detail--venue {
+    min-width: 50px;
+    margin-left: 10px;
+}
+
+/* == TraCuu (BangXepHang.css) Scoped Styles == */
+#tra-cuu-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* .content-title handled by common */
+#tra-cuu-content .league-header {
+    /* Replaces content-header */
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    background-color: #f8f9fa;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+#tra-cuu-content .league-header__info {
+    /* Replaces league-info */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+#tra-cuu-content .league-header__logo {
+    /* Replaces league-logo */
+    width: auto;
+    height: 28px;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
+#tra-cuu-content .league-header__name {
+    /* Replaces league-name */
+    color: #0F0F0F;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 7px;
+}
+
+#tra-cuu-content .league-header__dropdown-icon {
+    /* Replaces sidebar-utility-icon */
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#tra-cuu-content .page-header__view-all {
+    /* Renamed from view-all */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#tra-cuu-content .page-header__view-all:hover {
+    background-color: #eee;
+}
+
+#tra-cuu-content .page-header__view-all-text {
+    /* Renamed from view-all-text */
+    color: #5642A9;
+    font-size: 14px;
+    margin-right: 6px;
+    font-weight: 500;
+}
+
+#tra-cuu-content .player-standings {
+    /* Renamed from table-container */
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+}
+
+#tra-cuu-content .player-standings__content {
+    /* Renamed from table-content */
+    flex: 1;
+    margin-right: 0;
+}
+
+#tra-cuu-content .player-standings__header {
+    /* Renamed from table-header */
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background-color: #f1f3f5;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+
+#tra-cuu-content .player-standings__header-cell {
+    /* Base for header cells */
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 5px;
+    /* Add padding */
+}
+
+#tra-cuu-content .player-standings__header-cell--rank {
+    width: 50px;
+    text-align: left;
+}
+
+#tra-cuu-content .player-standings__header-cell--name {
+    flex-grow: 1;
+    margin-left: 60px;
+    text-align: left;
+}
+
+#tra-cuu-content .player-standings__header-details {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    justify-content: space-between;
+}
+
+#tra-cuu-content .player-standings__header-cell--club {
+    width: 180px;
+    text-align: left;
+}
+
+#tra-cuu-content .player-standings__header-cell--type {
+    width: 120px;
+    text-align: left;
+}
+
+#tra-cuu-content .player-standings__header-cell--goals {
+    width: 80px;
+    text-align: right;
+}
+
+#tra-cuu-content .player-standings__row {
+    /* Renamed from player-row */
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    border: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+#tra-cuu-content .player-standings__row:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+#tra-cuu-content .player-standings__player-info {
+    /* Renamed from player-info */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#tra-cuu-content .player-standings__rank {
+    /* Renamed from player-number */
+    color: #0F0F0F;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 16px;
+    width: 34px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#tra-cuu-content .player-standings__avatar {
+    /* Renamed from player-avatar */
+    width: 36px;
+    height: 36px;
+    margin-right: 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+#tra-cuu-content .player-standings__name {
+    /* Renamed from player-name */
+    color: #1C1919;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#tra-cuu-content .player-standings__stats {
+    /* Renamed from player-details */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    justify-content: space-between;
+}
+
+#tra-cuu-content .player-standings__club {
+    /* Renamed from player-club */
+    color: #555;
+    font-size: 14px;
+    width: 180px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+
+#tra-cuu-content .player-standings__type {
+    /* Renamed from player-type */
+    color: #555;
+    font-size: 14px;
+    width: 120px;
+    text-align: left;
+    padding: 0 5px;
+}
+
+#tra-cuu-content .player-standings__goals {
+    /* Renamed from player-goals */
+    color: #0F0F0F;
+    font-size: 15px;
+    font-weight: 600;
+    width: 80px;
+    text-align: right;
+    padding: 0 5px;
+}
+
+#tra-cuu-content .player-standings__row--alt {
+    background: #fdfdfd;
+}
+
+/* Renamed from player-row-alt */
+#tra-cuu-content .player-standings__row--highlighted {
+    background: #fff8e1;
+    border-left: 3px solid #ffc107;
+}
+
+/* Renamed from player-row-highlighted */
+
+/* == BaoCaoGiai.css Scoped Styles == */
+#bao-cao-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* .content-title handled by common */
+#bao-cao-content .league-header {
+    /* Replaces row-view14 */
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    background-color: #f8f9fa;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+#bao-cao-content .league-header__info-group {
+    /* Replaces row-view9 */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    /* Allow name to push action group */
+}
+
+#bao-cao-content .season-year {
+    position: absolute;
+    list-style: none;
+    background-color: #f2f2f2;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    align-items: center;
+    border-radius: 5%;
+}
+
+#bao-cao-content .list-year:hover {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#bao-cao-content .league-header__action-group {
+    /* Replaces row-view9 */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: auto;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#bao-cao-content .league-header__action-group:hover {
+    background-color: #eee;
+}
+
+#bao-cao-content .league-header__logo {
+    /* Replaces image20 */
+    width: auto;
+    height: 28px;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
+#bao-cao-content .league-header__name {
+    /* Replaces text9 */
+    color: #0F0F0F;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 7px;
+}
+
+#bao-cao-content .league-header__view-all-text {
+    /* Replaces text10 */
+    color: #5642A9;
+    font-size: 1
+}
+
+#bao-cao-content .team-standings__content {
+    display: flex;
+    flex-direction: column;
+}
+
+#bao-cao-content .team-standings__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bao-cao-content .team-standings__row.team-standings__row--cl {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bao-cao-content .team-standings__row.team-standings__row--el {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bao-cao-content .team-standings__club-info {
+    min-width: 300px;
+    max-width: 440px;
+}
+
+#bao-cao-content .team-standings__header-cell.team-standings__header-cell--club {
+    min-width: 300px;
+    max-width: 440px;
+}
+
+#bao-cao-content .team-standings__header-stats {
+    display: flex;
+    min-width: 150px;
+    max-width: 250px;
+    justify-content: space-around;
+}
+
+#bao-cao-content .team-standings__stats-data {
+    display: flex;
+    min-width: 150px;
+    max-width: 250px;
+    justify-content: space-around;
+}
+
+.team-standings__header-cell.team-standings__header-cell--last5 {
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.team-standings__last5-graph {
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.login-container {
+    display: grid;
+    width: 100vw;
+    height: 700px;
+    grid-template-columns: 3fr 2fr;
+}
+
+.login-container .login-banner {
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 700px;
+}
+
+.login-container .login-banner_img {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 7fr 1fr;
+    grid-template-columns: 7fr 2fr;
+    justify-items: center;
+    background-image: url(/screen/assets/Dang-nhap-template/image/Login\ Background\ Image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.login-container .login-banner_tilte {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.login-container .login-banner-tilte_top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(to right, #FBFBFB, #959595);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+}
+
+.login-container .login-banner-tilte_down {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(to right, #000, #DB000B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+}
+
+.login-container .login-sign-up {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #230D42;
+}
+.login-container .sign-up-container {
+    min-width: 300px;
+    min-height: 400px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    background-color: #230D42;
+    border-radius: 20px;
+}
+
+.login-container .sign-up-title {
+    grid-row: 1 / 2;;
+    align-self: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.login-container .sign-up-name {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    background-color: #261046;
+    border-radius: 20px;
+}
+
+.login-container .name {
+    color: #A4A4A4;
+    font-size: 16px;
+}
+
+.login-container .icon {
+    color: #A4A4A4;
+    padding: 0 20px;    
+}
+
+.login-container .sign-up-pass {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    background-color: #261046;
+    border-radius: 20px;
+}
+.login-container .sign-up-button {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+    border-radius: 20px;
+    color: #fff;
+
+}
+.login-container .sign-up-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

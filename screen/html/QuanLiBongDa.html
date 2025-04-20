@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onesport - Refactored</title>
+    <link rel="stylesheet" href="/screen/css_tuong_ung/QuanLiBongDa.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar__brand">
+                <img src="/screen/assets/App-layout-template/Sidebar/icon/Tvit.png" class="sidebar__brand-icon" alt="Icon">
+                <span class="sidebar__brand-name">Onesport</span>
+            </div>
+            <span class="sidebar__menu-label">Menu</span>
+            <nav>
+                <ul class="sidebar__nav-list">
+                    <li class="sidebar__nav-item">
+                        <a href="#" data-page="ket-qua" class="sidebar__nav-link active">
+                            <img src="/screen/assets/App-layout-template/Sidebar/icon/scoreboard 1.png" class="sidebar__menu-icon" alt="">
+                            <span>Kết quả thi đấu</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__nav-item">
+                        <a href="#" data-page="dang-ki" class="sidebar__nav-link">
+                            <img src="/screen/assets/App-layout-template/Sidebar/icon/register 1.png" class="sidebar__menu-icon" alt="">
+                            <span>Đăng kí thi đấu</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__nav-item">
+                        <a href="#" data-page="lap-lich" class="sidebar__nav-link">
+                            <img src="/screen/assets/App-layout-template/Sidebar/icon/schedule 2.png" class="sidebar__menu-icon" alt="">
+                            <span>Lập lịch thi đấu</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__nav-item">
+                        <a href="#" data-page="tra-cuu" class="sidebar__nav-link">
+                            <img src="/screen/assets/App-layout-template/Sidebar/icon/football-player 1.png" class="sidebar__menu-icon" alt="">
+                            <span>Tra cứu cầu thủ</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__nav-item">
+                        <a href="#" data-page="bao-cao" class="sidebar__nav-link">
+                            <img src="/screen/assets/App-layout-template/Sidebar/icon/seo-report 1.png" class="sidebar__menu-icon" alt="">
+                            <span>Báo cáo giải</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__nav-item">
+                        <a href="#" data-page="thay-doi" class="sidebar__nav-link">
+                            <img src="/screen/assets/App-layout-template/Sidebar/icon/gear-solid.svg" class="sidebar__menu-icon opacity-half" alt="">
+                            <span>Thay đổi quy định</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="header">
+                <img src="/screen/assets/App-layout-template/Wrapper/header/Icon/new-premier-league.png" class="header__logo"
+                    alt="Onesport Logo">
+
+                <div class="header__search-container">
+                    <!-- <div class="header__search-bar">
+                        <img src="/screen/assets/App-layout-template/Wrapper/header/Icon/search.svg" class="header__search-icon"
+                            alt="Search">
+                        <input type="text" class="header__search-input" placeholder="Tìm kiếm...">
+                    </div> -->
+                    <div class="header__actions">
+                        <!-- <img src="/screen/assets/App-layout-template/Wrapper/header/Icon/rotate-left-solid.svg" class="header__action-icon"
+                            alt="Redo button">
+                        <img src="/screen/assets/App-layout-template/Wrapper/header/Icon/rotate-right-solid.svg" class="header__action-icon"
+                            alt="Undo button">
+                        <img src="/screen/assets/App-layout-template/Wrapper/header/Icon/gear-solid.svg" class="header__action-icon"
+                            alt="Settings">
+                        <img src="/screen/assets/App-layout-template/Wrapper/header/Icon/Logo_UIT_updated.jpg" class="header__profile-avatar"
+                            alt="Avatar"> -->
+                    </div>
+                </div>
+            </header>
+
+            <main id="content-area" class="content-area">
+                <div class="ket-qua-banner">
+                    <div class="banner">
+        
+                    </div>
+                    <div class="ket-qua-moi-nhat">
+                        <div class="ket-qua-moi-nhat_tieu-de">
+                            <span>Trận vừa đấu</span>
+                        </div>
+                        <div class="ket-qua-moi-nhat_ti-so">
+                            <div class="co-doi-ben-trai">
+                                
+                            </div>
+                            <div class="ti-so">
+                                <div>2 - 2</div>
+                            </div>
+                            <div class="co-doi-ben-phai">
+                                
+                            </div>
+                        </div>
+                        <div class="ket-qua-moi-nhat_thong-tin">
+                            <div class="ten-doi-ben-trai">
+                                Việt Nam
+                            </div>
+                            <div class="ten-doi">
+                                Tên đội
+                            </div>
+                            <div class="ten-doi-ben-phai">
+                                Tây Ban Nha
+                            </div>
+                            <div class="diem-doi-ben-trai">
+                                2
+                            </div>
+                            <div class="sut-trung-dich">
+                                Ghi bàn
+                            </div>
+                            <div class="diem-doi-ben-phai">
+                                2
+                            </div>
+                            <div class="xep-hang-doi-ben-trai">
+                                1
+                            </div>
+                            <div class="pham-loi">
+                                Số lỗi phạm
+                            </div>
+                            <div class="xep-hang-doi-ben-phai">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ket-qua-content" class="page-content">
+                    <h1 class="content-title">⚽ Kết Quả Trận Đấu</h1>
+                    <h2 class="content-subtitle">Trận Đấu Gần Nhất</h2>
+                    <div class="title-underline"></div>
+                    <hr class="content-separator">
+                    <div class="match-result">
+                        <img src="https://via.placeholder.com/28x28.png?text=AR" class="match-result__team-flag"
+                            alt="Flag">
+                        <span class="match-result__team-name">Argentina</span>
+                        <div class="match-result__score" onclick="alert('Score Pressed!')"><span
+                                class="match-result__score-text">1 - 2</span></div>
+                        <span class="match-result__team-name">Italy</span>
+                        <img src="https://via.placeholder.com/28x28.png?text=IT" class="match-result__team-flag"
+                            alt="Flag">
+                        <div class="match-result__status" onclick="alert('Status Pressed!')"><span
+                                class="match-result__status-text">Full - Time</span></div>
+                        <span class="match-result__date">18 December 2022</span>
+                        <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon"
+                            alt="Icon">
+                        <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon"
+                            alt="Icon">
+                    </div>
+                    <div class="match-result">
+                        <img src="https://via.placeholder.com/28x28.png?text=PO" class="match-result__team-flag"
+                            alt="Flag">
+                        <span class="match-result__team-name">Portugal</span>
+                        <div class="match-result__score" onclick="alert('Score Pressed!')"><span
+                                class="match-result__score-text">2 - 3</span></div>
+                        <span class="match-result__team-name">Belgium</span>
+                        <img src="https://via.placeholder.com/28x28.png?text=BE" class="match-result__team-flag"
+                            alt="Flag">
+                        <div class="match-result__status" onclick="alert('Status Pressed!')"><span
+                                class="match-result__status-text">Full - Time</span></div>
+                        <span class="match-result__date">18 December 2022</span>
+                        <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon"
+                            alt="Icon">
+                        <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon"
+                            alt="Icon">
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                &copy; 2025 Onesport Application. Mọi quyền được bảo lưu.
+            </footer>
+        </div>
+    </div>
+
+    <template id="template-ket-qua">
+        <div class="ket-qua-banner">
+            <div class="banner">
+
+            </div>
+            <div class="ket-qua-moi-nhat">
+                <div class="ket-qua-moi-nhat_tieu-de">
+                    <span>Trận vừa đấu</span>
+                </div>
+                <div class="ket-qua-moi-nhat_ti-so">
+                    <div class="co-doi-ben-trai">
+                        
+                    </div>
+                    <div class="ti-so">
+                        <div>2 - 2</div>
+                    </div>
+                    <div class="co-doi-ben-phai">
+                        
+                    </div>
+                </div>
+                <div class="ket-qua-moi-nhat_thong-tin">
+                    <div class="ten-doi-ben-trai">
+                        Việt Nam
+                    </div>
+                    <div class="ten-doi">
+                        Tên đội
+                    </div>
+                    <div class="ten-doi-ben-phai">
+                        Tây Ban Nha
+                    </div>
+                    <div class="diem-doi-ben-trai">
+                        2
+                    </div>
+                    <div class="sut-trung-dich">
+                        Ghi bàn
+                    </div>
+                    <div class="diem-doi-ben-phai">
+                        2
+                    </div>
+                    <div class="xep-hang-doi-ben-trai">
+                        1
+                    </div>
+                    <div class="pham-loi">
+                        Số lỗi phạm
+                    </div>
+                    <div class="xep-hang-doi-ben-phai">
+                        2
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ket-qua-content" class="page-content">
+            <h1 class="content-title">⚽ Kết Quả Trận Đấu</h1>
+            <h2 class="content-subtitle">Trận Đấu Gần Nhất</h2>
+            <div class="title-underline"></div>
+            <hr class="content-separator">
+            <div class="match-result">
+                <img src="https://via.placeholder.com/28x28.png?text=AR" class="match-result__team-flag" alt="Flag">
+                <span class="match-result__team-name">Argentina</span>
+                <div class="match-result__score" onclick="alert('Score Pressed!')"><span
+                        class="match-result__score-text">1 - 2</span></div>
+                <span class="match-result__team-name">Italy</span>
+                <img src="https://via.placeholder.com/28x28.png?text=IT" class="match-result__team-flag" alt="Flag">
+                <div class="match-result__status" onclick="alert('Status Pressed!')"><span
+                        class="match-result__status-text">Full - Time</span></div>
+                <span class="match-result__date">18 December 2022</span>
+                <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon" alt="Icon">
+                <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon" alt="Icon">
+            </div>
+            <div class="match-result">
+                <img src="https://via.placeholder.com/28x28.png?text=PO" class="match-result__team-flag" alt="Flag">
+                <span class="match-result__team-name">Portugal</span>
+                <div class="match-result__score" onclick="alert('Score Pressed!')"><span
+                        class="match-result__score-text">2 - 3</span></div>
+                <span class="match-result__team-name">Belgium</span>
+                <img src="https://via.placeholder.com/28x28.png?text=BE" class="match-result__team-flag" alt="Flag">
+                <div class="match-result__status" onclick="alert('Status Pressed!')"><span
+                        class="match-result__status-text">Full - Time</span></div>
+                <span class="match-result__date">18 December 2022</span>
+                <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon" alt="Icon">
+                <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon" alt="Icon">
+            </div>
+            <div class="match-result">
+                <img src="https://via.placeholder.com/28x28.png?text=GH" class="match-result__team-flag" alt="Flag">
+                <span class="match-result__team-name">Ghana</span>
+                <div class="match-result__score" onclick="alert('Score Pressed!')"><span
+                        class="match-result__score-text">1 - 3</span></div>
+                <span class="match-result__team-name">Brazil</span>
+                <img src="https://via.placeholder.com/28x28.png?text=BR" class="match-result__team-flag" alt="Flag">
+                <div class="match-result__status" onclick="alert('Status Pressed!')"><span
+                        class="match-result__status-text">Full - Time</span></div>
+                <span class="match-result__date">17 December 2022</span>
+                <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon" alt="Icon">
+                <img src="https://via.placeholder.com/20x20.png?text=..." class="match-result__action-icon" alt="Icon">
+            </div>
+        </div>
+    </template>
+
+    <template id="template-dang-ki">
+        <div id="dang-ki-content" class="page-content">
+            <div class="team-profile-banner">
+                <h2 class="team-profile-banner__title">Hồ Sơ Đội Bóng</h2>
+            </div>
+            <hr class="content-separator">
+            <h2 class="content-title">Danh Sách Cầu Thủ Đăng Kí</h2>
+            <div class="player-table">
+                <div class="player-table__col player-table__col--serial">
+                    <div class="player-table__header"><span class="player-table__header-text">STT</span></div>
+                    <span class="player-table__cell">1</span>
+                    <span class="player-table__cell">2</span>
+                    <span class="player-table__cell">3</span>
+                </div>
+                <div class="player-table__col player-table__col--name">
+                    <div class="player-table__header"><span class="player-table__header-text">Cầu thủ</span></div>
+                    <span class="player-table__cell">Nguyễn Văn A</span>
+                    <span class="player-table__cell">Trần Thị B</span>
+                    <span class="player-table__cell">Lê Văn C</span>
+                </div>
+                <div class="player-table__col player-table__col--birthday">
+                    <div class="player-table__header"><span class="player-table__header-text">Ngày sinh</span></div>
+                    <span class="player-table__cell">01/01/1995</span>
+                    <span class="player-table__cell">15/05/1998</span>
+                    <span class="player-table__cell">20/11/1992</span>
+                </div>
+                <div class="player-table__col player-table__col--type">
+                    <div class="player-table__header"><span class="player-table__header-text">Loại Cầu thủ</span></div>
+                    <span class="player-table__cell">Trong nước</span>
+                    <span class="player-table__cell">Trong nước</span>
+                    <span class="player-table__cell">Nước ngoài</span>
+                </div>
+                <div class="player-table__col player-table__col--notes">
+                    <div class="player-table__header"><span class="player-table__header-text">Ghi chú</span></div>
+                    <span class="player-table__cell">Đội trưởng</span>
+                    <span class="player-table__cell">-</span>
+                    <span class="player-table__cell">-</span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template-lap-lich">
+        <div id="lap-lich-content" class="page-content">
+            <h1 class="content-title">⚽ Lập Lịch Thi Đấu</h1>
+            <div class="page-subtitle-container">
+                <div class="page-subtitle-wrapper">
+                    <h2 class="page-subtitle">Trận Đấu Sắp Tới</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <hr class="content-separator">
+            </div>
+            <div class="match-schedule-list">
+                <div class="match-schedule-item">
+                    <div class="match-schedule-item__team-group">
+                        <div class="match-schedule-item__team match-schedule-item__team--home">
+                            <img src="https://via.placeholder.com/28x28.png?text=AR"
+                                class="match-schedule-item__team-flag" alt="Flag">
+                            <span class="match-schedule-item__team-name">Argentina</span>
+                        </div>
+                        <div class="match-schedule-item__score-placeholder" onclick="alert('View Details?')"
+                            title="Chưa có tỷ số"><span class="match-schedule-item__score-text">? - ?</span></div>
+                        <div class="match-schedule-item__team match-schedule-item__team--away">
+                            <span class="match-schedule-item__team-name">Italy</span>
+                            <img src="https://via.placeholder.com/28x28.png?text=IT"
+                                class="match-schedule-item__team-flag" alt="Flag">
+                        </div>
+                    </div>
+                    <span class="match-schedule-item__detail match-schedule-item__detail--datetime">25/04/2025
+                        19:00</span>
+                    <span class="match-schedule-item__detail match-schedule-item__detail--venue">Sân A</span>
+                </div>
+                <div class="match-schedule-item">
+                    <div class="match-schedule-item__team-group">
+                        <div class="match-schedule-item__team match-schedule-item__team--home">
+                            <img src="https://via.placeholder.com/28x28.png?text=PO"
+                                class="match-schedule-item__team-flag" alt="Flag">
+                            <span class="match-schedule-item__team-name">Portugal</span>
+                        </div>
+                        <div class="match-schedule-item__score-placeholder" onclick="alert('View Details?')"
+                            title="Chưa có tỷ số"><span class="match-schedule-item__score-text">? - ?</span></div>
+                        <div class="match-schedule-item__team match-schedule-item__team--away">
+                            <span class="match-schedule-item__team-name">Belgium</span>
+                            <img src="https://via.placeholder.com/28x28.png?text=BE"
+                                class="match-schedule-item__team-flag" alt="Flag">
+                        </div>
+                    </div>
+                    <span class="match-schedule-item__detail match-schedule-item__detail--datetime">26/04/2025
+                        20:00</span>
+                    <span class="match-schedule-item__detail match-schedule-item__detail--venue">Sân B</span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template-tra-cuu">
+        <div id="tra-cuu-content" class="page-content">
+            <h1 class="content-title">🏆 Bảng Xếp Hạng Cầu Thủ
+                <div class="header__search-bar">
+                    <img src="/screen/assets/App-layout-template/Wrapper/header/Icon/search.svg" class="header__search-icon"
+                        alt="Search">
+                    <input type="text" class="header__search-input" placeholder="Tìm kiếm...">
+                </div>
+            </h1>
+            <div class="league-header">
+                <div class="league-header__info">
+                    <img src="https://via.placeholder.com/80x32.png?text=Premier+League" class="league-header__logo"
+                        alt="League Logo">
+                    <div class="league-header__info-group">
+                        <span class="league-header__name">Premier League</span>
+                        <img src="https://via.placeholder.com/20x20.png?text=D" class="league-header__dropdown-icon"
+                            alt="Dropdown">
+                    </div>
+                </div>
+                <div class="page-header__view-all">
+                    <span class="page-header__view-all-text">Xem tất cả</span>
+                </div>
+            </div>  
+            <div class="player-standings">
+                <div class="player-standings__content">
+                    <div class="player-standings__header">
+                        <span class="player-standings__header-cell player-standings__header-cell--rank">#</span>
+                        <span class="player-standings__header-cell player-standings__header-cell--name">Cầu thủ</span>
+                        <div class="player-standings__header-details">
+                            <span class="player-standings__header-cell player-standings__header-cell--club">Câu lạc
+                                bộ</span>
+                            <span class="player-standings__header-cell player-standings__header-cell--type">Loại</span>
+                            <span class="player-standings__header-cell player-standings__header-cell--goals">Bàn
+                                thắng</span>
+                        </div>
+                    </div>
+                    <div class="player-standings__row">
+                        <div class="player-standings__player-info">
+                            <span class="player-standings__rank">1</span>
+                            <img src="https://via.placeholder.com/36x36.png?text=P1" class="player-standings__avatar"
+                                alt="Avatar">
+                            <span class="player-standings__name">Erling Haaland</span>
+                        </div>
+                        <div class="player-standings__stats">
+                            <span class="player-standings__club">Manchester City</span>
+                            <span class="player-standings__type">Tiền đạo</span>
+                            <span class="player-standings__goals">20</span>
+                        </div>
+                    </div>
+                    <div class="player-standings__row">
+                        <div class="player-standings__player-info">
+                            <span class="player-standings__rank">2</span>
+                            <img src="https://via.placeholder.com/36x36.png?text=P2" class="player-standings__avatar"
+                                alt="Avatar">
+                            <span class="player-standings__name">Mohamed Salah</span>
+                        </div>
+                        <div class="player-standings__stats">
+                            <span class="player-standings__club">Liverpool</span>
+                            <span class="player-standings__type">Tiền đạo</span>
+                            <span class="player-standings__goals">18</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template-bao-cao">
+        <div id="bao-cao-content" class="page-content">
+            <h1 class="content-title">🏆 Bảng Xếp Hạng Giải Đấu</h1>
+            <div class="league-header">
+                <div class="league-header__info-group">
+                    <img src="/screen/assets/Bao-cao-template/cdnlogo.com_premier-league.svg" class="league-header__logo"
+                        alt="League Logo">
+                    <div class="league-header__info-group"> <span class="league-header__name">Premier League</span>
+                        <details class="league season">
+                            <summary class="dropdown-btn"></summary>
+                            <ul class="season-year">
+                                <li class="list-year">2025</li>
+                                <li class="list-year">2024</li>
+                                <li class="list-year">2023</li>
+                                <li class="list-year">2022</li>
+                                <li class="list-year">2021</li>
+                            </ul>
+                        </details>
+                        
+                    </div>
+                </div>
+                <div class="league-header__action-group">
+                    <span class="league-header__view-all-text">Xem tất cả</span>
+                </div>
+            </div>
+            <div class="team-standings">
+                <div class="team-standings__content">
+                    <div class="team-standings__header">
+                        <span class="team-standings__header-cell team-standings__header-cell--club">Câu lạc bộ</span>
+                        <div class="team-standings__header-stats">
+                            <span class="team-standings__header-cell team-standings__header-cell--stat">W</span>
+                            <span class="team-standings__header-cell team-standings__header-cell--stat">D</span>
+                            <span class="team-standings__header-cell team-standings__header-cell--stat">L</span>
+                            <span class="team-standings__header-cell team-standings__header-cell--stat">Pts</span>
+                        </div>
+                        <span class="team-standings__header-cell team-standings__header-cell--last5">5 Trận Gần
+                            Nhất</span>
+                    </div>
+                    <div class="team-standings__row team-standings__row--cl">
+                        <div class="team-standings__club-info">
+                            <span class="team-standings__rank">1</span>
+                            <img src="https://via.placeholder.com/24x24.png?text=MC" class="team-standings__logo"
+                                alt="Club Logo">
+                            <span class="team-standings__name">Manchester City</span>
+                        </div>
+                        <div class="team-standings__stats-data">
+                            <span class="team-standings__stat">5</span>
+                            <span class="team-standings__stat">5</span>
+                            <span class="team-standings__stat">3</span>
+                            <span class="team-standings__stat team-standings__stat--points">80</span>
+                        </div>
+                        <img src="https://via.placeholder.com/120x20.png?text=WWWDW" class="team-standings__last5-graph"
+                            alt="Last Matches">
+                    </div>
+                    <div class="team-standings__row team-standings__row--cl">
+                        <div class="team-standings__club-info">
+                            <span class="team-standings__rank">2</span>
+                            <img src="https://via.placeholder.com/24x24.png?text=LIV" class="team-standings__logo"
+                                alt="Club Logo">
+                            <span class="team-standings__name">Liverpool</span>
+                        </div>
+                        <div class="team-standings__stats-data">
+                            <span class="team-standings__stat">24</span>
+                            <span class="team-standings__stat">6</span>
+                            <span class="team-standings__stat">3</span>
+                            <span class="team-standings__stat team-standings__stat--points">78</span>
+                        </div>
+                        <img src="https://via.placeholder.com/120x20.png?text=WWWWW" class="team-standings__last5-graph"
+                            alt="Last Matches">
+                    </div>
+                    <div class="team-standings__row team-standings__row--el">
+                        <div class="team-standings__club-info">
+                            <span class="team-standings__rank">5</span>
+                            <img src="https://via.placeholder.com/24x24.png?text=WHU" class="team-standings__logo"
+                                alt="Club Logo">
+                            <span class="team-standings__name">West Ham United</span>
+                        </div>
+                        <div class="team-standings__stats-data">
+                            <span class="team-standings__stat">18</span>
+                            <span class="team-standings__stat">8</span>
+                            <span class="team-standings__stat">7</span>
+                            <span class="team-standings__stat team-standings__stat--points">62</span>
+                        </div>
+                        <img src="https://via.placeholder.com/120x20.png?text=WLDWL" class="team-standings__last5-graph"
+                            alt="Last Matches">
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+    </template>
+
+    <!--Template dang nhap-->
+    <template id="template-dang-nhap">
+        <!-- <div class="login-container">
+          <div class="login-scroll">
+            <div class="login-column">
+              <div class="login-banner">
+                <span class="login-title">Sign in to your adventure!</span>
+              </div>
+              <span class="login-heading">SIGN IN</span>
+      
+              <div class="login-input-row">
+                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3b9c4b94-afc0-4f08-90c3-23876d7c17a6" class="login-icon" />
+                <span class="login-label">Your Name</span>
+              </div>
+      
+              <div class="login-input-row-alt">
+                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0213fe00-aa59-42b7-b6b5-c452c17b1fca" class="login-icon-alt" />
+                <span class="login-label-alt">Password</span>
+                <div class="login-box"></div>
+                <div class="login-box-alt"></div>
+              </div>
+      
+              <div class="login-button-wrapper" id="sign-up-button">
+                <span class="login-button-text">Sign up</span>
+              </div>
+      
+              <div class="login-gradient"></div>
+            </div>
+          </div>
+        </div> -->
+    <div class="login-container">
+        <div class="login-banner">
+            <div class="login-banner_img">
+                <div class="login-banner_tilte">
+                    <div class="login-banner-tilte_top">
+                        sign in to your
+                    </div>
+                    <div class="login-banner-tilte_down">
+                        adventure
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-sign-up">
+            <div class="sign-up-container">
+                <div class="sign-up-title">
+                    sign in
+                </div>
+                <div class="sign-up-name">
+                    <i class="icon">
+                        <img src="/screen/assets/Dang-nhap-template/icon/user.png" alt="" class="icon-img">
+                    </i>
+                    <span class="name">
+                        Your name
+                    </span>
+                </div>
+                <div class="sign-up-pass">
+                    <i class="icon">
+                        <img src="/screen/assets/Dang-nhap-template/icon/Lock.png" alt="" class="icon-img">
+                    </i>
+                    <span class="name">
+                        Your password
+                    </span>
+                </div>
+                <div class="sign-up-button">
+                    sign up
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </template>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarLinks = document.querySelectorAll('.sidebar .sidebar__nav-link');
+            const contentArea = document.getElementById('content-area');
+            const templates = {
+                'ket-qua': document.getElementById('template-ket-qua'),
+                'dang-ki': document.getElementById('template-dang-ki'),
+                'lap-lich': document.getElementById('template-lap-lich'),
+                'tra-cuu': document.getElementById('template-tra-cuu'),
+                'bao-cao': document.getElementById('template-bao-cao'),
+            };
+        
+            let currentPageId = 'ket-qua';
+        
+            // Gắn template đăng nhập vào DOM
+            const loginTemplate = document.getElementById('template-dang-nhap');
+            const loginContent = loginTemplate.content.cloneNode(true);
+            document.body.appendChild(loginContent);
+        
+            // Chờ DOM render xong (setTimeout 0ms cũng được)
+            setTimeout(() => {
+                const signUpBtn = document.querySelector('.sign-up-button');
+                if (signUpBtn) {
+                    signUpBtn.addEventListener('click', () => {
+                        document.querySelector('.login-container')?.remove(); // hoặc .login-fullscreen nếu bạn dùng full screen
+                        document.querySelector('.app-layout').style.display = 'flex'; // Hiện layout chính
+                    });
+                } else {
+                    console.warn('Không tìm thấy nút Sign up trong DOM!');
+                }
+            }, 0);
+        
+            function loadContent(pageId) {
+                if (!templates[pageId] || !templates[pageId].content) {
+                    console.error(`Template not found or empty for page: ${pageId}`);
+                    contentArea.innerHTML = `<div class="page-content error-message">Lỗi: Không tìm thấy nội dung cho trang '${pageId}'.</div>`;
+                    sidebarLinks.forEach(link => link.classList.remove('active'));
+                    return;
+                }
+        
+                const templateContent = templates[pageId].content.cloneNode(true);
+                contentArea.innerHTML = '';
+                contentArea.appendChild(templateContent);
+                contentArea.scrollTop = 0;
+        
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+        
+                currentPageId = pageId;
+                console.log(`Loaded content for: ${pageId}`);
+            }
+        
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const pageId = this.dataset.page;
+                    if (pageId !== currentPageId) {
+                        loadContent(pageId);
+                    }
+                });
+            });
+        });
+        </script>
+        
+</body>
+
+</html>
