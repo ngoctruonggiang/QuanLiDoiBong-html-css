@@ -1,0 +1,130 @@
+.absolute-box {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 1429px;
+	height: 125px;
+	background: linear-gradient(180deg, #160430, #00000000);
+}
+.absolute-row-view {
+	position: absolute;
+	top: 370px;
+	right: -429px;
+	width: 460px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	background: #260F46;
+	border-radius: 10px;
+	padding-top: 19px;
+	padding-bottom: 22px;
+	padding-left: 11px;
+}
+.absolute-row-view2 {
+	position: absolute;
+	bottom: 357px;
+	right: -428px;
+	width: 460px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: flex-start;
+	background: #260F46;
+	border-radius: 10px;
+	padding-top: 21px;
+	padding-left: 24px;
+}
+.absolute-text {
+	position: absolute;
+	top: 197px;
+	right: -247px;
+	color: #FFFFFF;
+	font-size: 77px;
+	font-weight: bold;
+}
+.absolute-view {
+	position: absolute;
+	bottom: 223px;
+	right: -429px;
+	width: 460px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(180deg, #501693, #3E70A1);
+	border-radius: 18px;
+}
+.box {
+	width: 26px;
+	height: 25px;
+	margin-top: 21px;
+	margin-right: 160px;
+}
+.box2 {
+	width: 24px;
+	height: 23px;
+	margin-top: 23px;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+}
+.contain {
+	display: flex;
+	flex-direction: column;
+	background: #FFFFFF;
+}
+.image {
+	width: 21px;
+	height: 25px;
+	margin-right: 26px;
+	object-fit: fill;
+}
+.image2 {
+	width: 20px;
+	height: 20px;
+	margin-top: 1px;
+	margin-right: 14px;
+	object-fit: fill;
+}
+.scroll-view {
+	height: 928px;
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: #230D42;
+}
+.text {
+	color: #FFFFFF;
+	font-size: 50px;
+	font-weight: bold;
+	width: 417px;
+}
+.text2 {
+	color: #A3A3A3;
+	font-size: 16px;
+	font-weight: bold;
+}
+.text3 {
+	color: #A3A3A3;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 53px;
+}
+.text4 {
+	color: #FFFFFF;
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 12px;
+}
+.view {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 752px 453px 73px 62px;
+	background-image: url('https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ceedb7eb-1507-4f73-99cb-0ccdd911efff');
+	background-size: cover;
+	background-position: center;
+}

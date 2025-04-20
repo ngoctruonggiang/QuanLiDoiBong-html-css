@@ -1,0 +1,751 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout Components */
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+}
+
+.scrollable-content {
+    height: 1546px;
+    align-self: stretch;
+    background: #FFFFFF;
+}
+
+/* Header */
+.header {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #FFFFFF;
+    padding: 12px 47px;
+    box-shadow: 0px 0.5px 0px #00000026;
+}
+
+.header-logo {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 52px;
+    height: 12px;
+    margin-right: 19px;
+    object-fit: fill;
+}
+
+.header-icon {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 33px;
+    height: 28px;
+    margin-right: 9px;
+    object-fit: fill;
+}
+
+.header-title {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 66px;
+    height: 28px;
+    margin-right: 143px;
+    object-fit: fill;
+}
+
+.header-search-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 12px;
+}
+
+.header-search-icon {
+    width: 33px;
+    height: 28px;
+    margin-right: 9px;
+    object-fit: fill;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0000000D;
+    border-radius: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.search-input-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 2px;
+    margin-left: 227px;
+}
+
+.search-icon-small {
+    width: 8px;
+    height: 11px;
+    margin-right: 6px;
+    object-fit: fill;
+}
+
+.search-text {
+    color: #4C4C4C;
+    font-size: 13px;
+}
+
+.search-button {
+    border-radius: 6px;
+    width: 10px;
+    height: 13px;
+    margin-right: 7px;
+    object-fit: fill;
+}
+
+.header-actions {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.action-icon {
+    width: 33px;
+    height: 28px;
+    margin-right: 8px;
+    object-fit: fill;
+}
+
+.action-icon-last {
+    width: 33px;
+    height: 28px;
+    object-fit: fill;
+}
+
+/* Main Layout */
+.main-layout {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    padding: 23px 24px 334px 24px;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 72px;
+    object-fit: fill;
+}
+
+.sidebar-menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 32px;
+    object-fit: fill;
+}
+
+.sidebar-footer-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 56px;
+    object-fit: fill;
+}
+
+.sidebar-divider {
+    width: 24px;
+    height: 1px;
+    margin-bottom: 56px;
+    object-fit: fill;
+}
+
+.sidebar-utility-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: fill;
+}
+
+/* Content Area */
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Top Navigation */
+.top-navigation {
+    display: flex;
+    align-items: flex-start;
+    background: #F6F6F4;
+    border: 1px solid #D3D3D3;
+    padding: 16px 24px;
+    margin-left: 282px;
+}
+
+.search-box {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background: #E6E6E6;
+    border-radius: 6px;
+    padding: 10px 8px;
+    margin-right: 204px;
+}
+
+.search-box-icon {
+    border-radius: 6px;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    object-fit: fill;
+}
+
+.search-box-input {
+    color: #626262;
+    font-size: 12px;
+    width: 92px;
+    background: none;
+    border: none;
+}
+
+.nav-actions {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.premium-button {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #5642A9;
+    border-radius: 6px;
+    border: none;
+    padding: 7px 16px;
+    margin-right: 24px;
+    text-align: left;
+}
+
+.premium-text {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.notification-area {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 24px;
+}
+
+.notification-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    object-fit: fill;
+}
+
+.profile-avatar {
+    width: 36px;
+    height: 36px;
+    object-fit: fill;
+}
+
+/* Side Menu */
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #F6F6F4;
+    border: 1px solid #D3D3D3;
+    padding-top: 23px;
+    padding-bottom: 328px;
+}
+
+.menu-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 72px;
+    margin-left: 24px;
+}
+
+.brand-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    object-fit: fill;
+}
+
+.brand-name {
+    color: #0F0F0F;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-label {
+    color: #626262;
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-left: 24px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 16px;
+    object-fit: fill;
+}
+
+.menu-text {
+    color: #626262;
+    font-size: 16px;
+}
+
+.menu-item-active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 23px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.active-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: fill;
+}
+
+.active-text {
+    color: #000000;
+    font-size: 16px;
+    margin-left: 41px;
+}
+
+.active-indicator {
+    align-items: flex-start;
+    background: #A9A8A8;
+    padding-right: 210px;
+}
+
+.active-marker {
+    width: 25px;
+    height: 25px;
+    background: #A9A8A8;
+}
+
+/* Main Content */
+.main-content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 23px;
+    margin-left: 298px;
+    margin-right: 55px;
+}
+
+.content-title {
+    color: #0F0F0F;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.content-header {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.league-info {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.league-logo {
+    width: 72px;
+    height: 32px;
+    margin-right: 16px;
+    object-fit: fill;
+}
+
+.league-name {
+    color: #0F0F0F;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+.league-dropdown {
+    width: 24px;
+    height: 24px;
+    object-fit: fill;
+}
+
+.view-all {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.view-all-text {
+    color: #626262;
+    font-size: 16px;
+    margin-right: 11px;
+}
+
+.view-all-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: fill;
+}
+
+/* Table Content */
+.table-container {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+}
+
+.table-content {
+    flex: 1;
+    margin-right: 12px;
+}
+
+.table-header {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    padding: 27px 6px;
+    margin-bottom: 8px;
+}
+
+.header-sn {
+    color: #000000;
+    font-size: 16px;
+    margin-right: 78px;
+}
+
+.header-name {
+    color: #000000;
+    font-size: 16px;
+    margin-right: 108px;
+}
+
+.header-details {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-club {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-left: 11px;
+    margin-right: 296px;
+}
+
+.header-type {
+    color: #0F0F0F;
+    font-size: 16px;
+    flex: 1;
+}
+
+.header-goals {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 42px;
+}
+
+/* Player Rows */
+.player-row {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #F2F0F9;
+    border-radius: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    margin-bottom: 8px;
+}
+
+.player-info {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.player-number {
+    color: #0F0F0F;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.player-number-regular {
+    color: #0F0F0F;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 24px;
+}
+
+.player-number-small {
+    color: #0F0F0F;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 23px;
+}
+
+.player-avatar {
+    width: 32px;
+    height: 28px;
+    margin-top: 4px;
+    margin-right: 18px;
+    object-fit: fill;
+}
+
+.player-avatar-centered {
+    width: 32px;
+    height: 29px;
+    margin-top: 2px;
+    margin-right: 16px;
+    object-fit: fill;
+}
+
+.player-avatar-top {
+    width: 32px;
+    height: 27px;
+    margin-top: 4px;
+    margin-right: 16px;
+    object-fit: fill;
+}
+
+.player-avatar-last {
+    width: 28px;
+    height: 28px;
+    margin-top: 3px;
+    margin-left: 2px;
+    margin-right: 18px;
+    object-fit: fill;
+}
+
+.player-name {
+    color: #1C1919;
+    font-size: 16px;
+}
+
+.player-name-regular {
+    color: #000000;
+    font-size: 16px;
+}
+
+.player-details {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.player-club {
+    color: #0F0F0F;
+    font-size: 16px;
+    flex: 1;
+}
+
+.player-club-long {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 149px;
+}
+
+.player-club-league {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 270px;
+}
+
+.player-type {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 219px;
+}
+
+.player-type-regular {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 221px;
+}
+
+.player-type-narrow {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 222px;
+}
+
+.player-goals {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 53px;
+}
+
+.player-goals-small {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 51px;
+}
+
+.player-goals-mid {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 54px;
+}
+
+.player-goals-last {
+    color: #0F0F0F;
+    font-size: 16px;
+    margin-right: 52px;
+}
+
+/* Player Row Variations */
+.player-row-alt {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #F2F0F9;
+    border-radius: 8px;
+    padding: 16px 8px;
+    margin-bottom: 8px;
+}
+
+.player-row-stacked {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    background: #F2F0F9;
+    border-radius: 8px;
+    padding: 16px 8px;
+    margin-bottom: 8px;
+}
+
+.player-info-stacked {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+}
+
+.player-details-stacked {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.player-row-adjusted {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #F2F0F9;
+    border-radius: 8px;
+    padding: 13px 9px;
+    margin-bottom: 8px;
+}
+
+.player-row-highlighted {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    background: #FEE6EB;
+    border-radius: 8px;
+    padding: 16px 9px;
+    margin-bottom: 8px;
+}
+
+.player-row-highlighted-last {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #FEE6EB;
+    border-radius: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 11px;
+}
+
+.player-info-last {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 1px;
+}
+
+/* Avatar Containers */
+.avatar-container {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #414158;
+    border-radius: 131px;
+    margin-right: 16px;
+}
+
+.avatar-container-padded {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #414158;
+    border-radius: 131px;
+    padding-top: 2px;
+    margin-right: 16px;
+}
+
+/* Scrollbar */
+.scrollbar {
+    flex-shrink: 0;
+    align-items: flex-start;
+    background: #D9D9D9;
+    border-radius: 40px;
+    padding-bottom: 300px;
+    margin-top: 129px;
+}
+
+.scrollbar-thumb {
+    width: 6px;
+    height: 76px;
+    background: #5642A9;
+    border-radius: 40px;
+}

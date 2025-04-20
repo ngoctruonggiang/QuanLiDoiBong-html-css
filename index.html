@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneSport - Football Management System</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-brand">
+                <img src="https://via.placeholder.com/52x12" alt="OneSport Logo" class="header-logo">
+                <i class="fas fa-futbol header-icon"></i>
+                <h1 class="header-title">OneSport</h1>
+            </div>
+            
+            <div class="header-search">
+                <div class="search-bar">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search OneSport.com" class="search-input">
+                    <button class="search-button">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <button class="action-icon"><i class="fas fa-bell"></i></button>
+                <button class="action-icon"><i class="fas fa-envelope"></i></button>
+                <button class="action-icon"><i class="fas fa-cog"></i></button>
+                <div class="profile-avatar">
+                    <img src="https://via.placeholder.com/36x36" alt="User Avatar">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-layout">
+            <!-- Sidebar Navigation -->
+            <nav class="sidebar">
+                <div class="sidebar-menu">
+                    <div class="menu-brand">
+                        <i class="fas fa-futbol brand-icon"></i>
+                        <span class="brand-name">OneSport</span>
+                    </div>
+                    
+                    <div class="menu-section">
+                        <span class="menu-label">Menu</span>
+                        <ul class="menu-items">
+                            <li class="menu-item">
+                                <a href="ket-qua-thi-dau.html" class="menu-link">
+                                    <i class="fas fa-trophy menu-icon"></i>
+                                    <span>Kết quả thi đấu</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="dang-ki-thi-dau.html" class="menu-link">
+                                    <i class="fas fa-user-plus menu-icon"></i>
+                                    <span>Đăng kí thi đấu</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="lap-lich-thi-dau.html" class="menu-link">
+                                    <i class="fas fa-calendar-alt menu-icon"></i>
+                                    <span>Lập lịch thi đấu</span>
+                                </a>
+                            </li>
+                            <li class="menu-item active">
+                                <a href="bang-xep-hang.html" class="menu-link">
+                                    <i class="fas fa-list-ol menu-icon"></i>
+                                    <span>Bảng xếp hạng</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="bao-cao-giai.html" class="menu-link">
+                                    <i class="fas fa-chart-bar menu-icon"></i>
+                                    <span>Báo cáo giải</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-footer">
+                        <div class="sidebar-divider"></div>
+                        <button class="sidebar-utility">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help & Support</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content Area -->
+            <main class="content-area">
+                <!-- Top Navigation -->
+                <div class="top-navigation">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Type to search..." class="search-input">
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <button class="premium-button">
+                            <span>Go Premium</span>
+                        </button>
+                        
+                        <div class="notification-area">
+                            <button class="notification-icon">
+                                <i class="fas fa-bell"></i>
+                            </button>
+                            <button class="notification-icon">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="profile-avatar">
+                            <img src="https://via.placeholder.com/36x36" alt="User Avatar">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <h1 class="content-title">🏆 Player Standings</h1>
+                    
+                    <div class="content-header">
+                        <div class="league-info">
+                            <img src="https://via.placeholder.com/72x32" alt="Premier League Logo" class="league-logo">
+                            <div class="league-details">
+                                <span class="league-name">Premier League</span>
+                                <i class="fas fa-chevron-down league-dropdown"></i>
+                            </div>
+                        </div>
+                        
+                        <button class="view-all">
+                            <span>View All</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Standings Table -->
+                    <div class="table-container">
+                        <div class="table-content">
+                            <div class="table-header">
+                                <span class="header-sn">#</span>
+                                <span class="header-name">Player</span>
+                                <div class="header-details">
+                                    <span class="header-club">Club</span>
+                                    <span class="header-type">Type</span>
+                                    <span class="header-goals">Goals</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Player Rows -->
+                            <div class="player-row">
+                                <div class="player-info">
+                                    <span class="player-number">1</span>
+                                    <img src="https://via.placeholder.com/32x28" alt="Player Avatar" class="player-avatar">
+                                    <span class="player-name">Harry Kane</span>
+                                </div>
+                                <div class="player-details">
+                                    <span class="player-club">Tottenham</span>
+                                    <span class="player-type">Forward</span>
+                                    <span class="player-goals">24</span>
+                                </div>
+                            </div>
+                            
+                            <div class="player-row">
+                                <div class="player-info">
+                                    <span class="player-number">2</span>
+                                    <img src="https://via.placeholder.com/32x28" alt="Player Avatar" class="player-avatar">
+                                    <span class="player-name">Mohamed Salah</span>
+                                </div>
+                                <div class="player-details">
+                                    <span class="player-club">Liverpool</span>
+                                    <span class="player-type">Forward</span>
+                                    <span class="player-goals">22</span>
+                                </div>
+                            </div>
+                            
+                            <div class="player-row">
+                                <div class="player-info">
+                                    <span class="player-number">3</span>
+                                    <img src="https://via.placeholder.com/32x28" alt="Player Avatar" class="player-avatar">
+                                    <span class="player-name">Son Heung-min</span>
+                                </div>
+                                <div class="player-details">
+                                    <span class="player-club">Tottenham</span>
+                                    <span class="player-type">Forward</span>
+                                    <span class="player-goals">19</span>
+                                </div>
+                            </div>
+                            
+                            <div class="player-row highlighted">
+                                <div class="player-info">
+                                    <span class="player-number">4</span>
+                                    <img src="https://via.placeholder.com/32x28" alt="Player Avatar" class="player-avatar">
+                                    <span class="player-name">Cristiano Ronaldo</span>
+                                </div>
+                                <div class="player-details">
+                                    <span class="player-club">Man United</span>
+                                    <span class="player-type">Forward</span>
+                                    <span class="player-goals">18</span>
+                                </div>
+                            </div>
+                            
+                            <div class="player-row">
+                                <div class="player-info">
+                                    <span class="player-number">5</span>
+                                    <img src="https://via.placeholder.com/32x28" alt="Player Avatar" class="player-avatar">
+                                    <span class="player-name">Kevin De Bruyne</span>
+                                </div>
+                                <div class="player-details">
+                                    <span class="player-club">Man City</span>
+                                    <span class="player-type">Midfielder</span>
+                                    <span class="player-goals">15</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="scrollbar">
+                            <div class="scrollbar-thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/52x12" alt="OneSport Logo">
+                    <span>OneSport - Football Management System</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2023 OneSport. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
